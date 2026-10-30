@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ef665b">
+  <meta name="description" content="تقارب - تواصل وشارك واكتشف">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <title>تقارب | TAQARUB</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><img src="icons/icon-192.png" alt="شعار تقارب"><span>تقارب</span></div>
+    <button id="langBtn" class="text-btn" type="button">English</button>
+  </header>
+
+  <main>
+    <section id="feedPage" class="page active">
+      <div class="welcome">
+        <h1 data-ar="أهلاً بك في تقارب" data-en="Welcome to Taqarub">أهلاً بك في تقارب</h1>
+        <p data-ar="تواصل • شارك • اكتشف" data-en="Connect • Share • Discover">تواصل • شارك • اكتشف</p>
+      </div>
+      <section class="composer card">
+        <div class="userline"><div class="avatar">ت</div><strong id="composerName">أنت</strong></div>
+        <textarea id="postText" rows="3" placeholder="بماذا تفكر اليوم؟"></textarea>
+        <div class="composer-actions">
+          <span class="hint" data-ar="شارك فكرة لطيفة مع المجتمع" data-en="Share a thought with the community">شارك فكرة لطيفة مع المجتمع</span>
+          <button id="publishBtn" class="primary" type="button">نشر</button>
+        </div>
+      </section>
+      <div id="posts"></div>
+    </section>
+
+    <section id="friendsPage" class="page">
+      <div class="empty card"><div class="bigicon">♧</div><h2 data-ar="الأصدقاء" data-en="Friends">الأصدقاء</h2><p data-ar="قائمة الأصدقاء ستتوفر بعد ربط قاعدة البيانات." data-en="Friends will be available after connecting the database.">قائمة الأصدقاء ستتوفر بعد ربط قاعدة البيانات.</p></div>
+    </section>
+    <section id="messagesPage" class="page">
+      <div class="empty card"><div class="bigicon">✉</div><h2 data-ar="الرسائل" data-en="Messages">الرسائل</h2><p data-ar="المحادثات الخاصة ستتوفر في مرحلة لاحقة." data-en="Private chats will be added in a later stage.">المحادثات الخاصة ستتوفر في مرحلة لاحقة.</p></div>
+    </section>
+    <section id="alertsPage" class="page">
+      <div class="empty card"><div class="bigicon">♧</div><h2 data-ar="الإشعارات" data-en="Notifications">الإشعارات</h2><p data-ar="لا توجد إشعارات حالياً." data-en="No notifications yet.">لا توجد إشعارات حالياً.</p></div>
+    </section>
+    <section id="profilePage" class="page">
+      <div class="empty card"><div class="avatar large">ت</div><h2 data-ar="ملفي الشخصي" data-en="My profile">ملفي الشخصي</h2><p data-ar="الملف الشخصي الكامل يحتاج حساباً وقاعدة بيانات." data-en="A full profile needs accounts and a database.">الملف الشخصي الكامل يحتاج حساباً وقاعدة بيانات.</p></div>
+    </section>
+  </main>
+
+  <nav class="bottomnav" aria-label="التنقل">
+    <button class="navitem active" data-page="feedPage"><span>⌂</span><small data-ar="الرئيسية" data-en="Home">الرئيسية</small></button>
+    <button class="navitem" data-page="friendsPage"><span>♧</span><small data-ar="الأصدقاء" data-en="Friends">الأصدقاء</small></button>
+    <button class="navitem" data-page="messagesPage"><span>✉</span><small data-ar="الرسائل" data-en="Messages">الرسائل</small></button>
+    <button class="navitem" data-page="alertsPage"><span>♢</span><small data-ar="الإشعارات" data-en="Alerts">الإشعارات</small></button>
+    <button class="navitem" data-page="profilePage"><span>◎</span><small data-ar="ملفي" data-en="Profile">ملفي</small></button>
+  </nav>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
